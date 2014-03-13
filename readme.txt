@@ -50,6 +50,3 @@ This section describes how to install the plugin and get it working.
 == A note from the lead programmer ==
 
 I would love to hear any feedback you have regarding this WOD plugin.  *Help me make it even better* for the CrossFit community; please use the WordPress.org support forums to submit bug reports, feature requests, etc.
-
-
-`<?php code();?>`
