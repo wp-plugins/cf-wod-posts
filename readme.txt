@@ -12,9 +12,13 @@ Add the ability to post CrossFit WODs to your WordPress site.
 
 == Description ==
 
-Add the ability to post CrossFit WODs to your WordPress site. Adds a custom WOD post type to the native WordPress dashboard. This will allow you to have an area of your dashboard dedicated to creating, editing, and publishing WODs while keeping your other content such as blog posts, pages, and media separate.
+Add the ability to post CrossFit WODs to your WordPress site.
+
+Adds a custom WOD post type to the native WordPress dashboard. This will allow you to have an area of your dashboard dedicated to creating, editing, and publishing WODs while keeping your other content such as blog posts, pages, and media separate.
 
 The WOD post type uses the native WordPress interface for editing WODs, so you can include links, pictures, videos or short-codes with your WODs just as you can in a blog post or page.
+
+Check out the “Screenshots” tab (above) for an easy visual guide to the plugin’s features.
 
 
 == Installation ==
