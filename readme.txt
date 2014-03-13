@@ -27,7 +27,15 @@ This section describes how to install the plugin and get it working.
 
 == Screenshots ==
 
-1. Coming soon
+1. Adds a WODs custom post type to the native WordPress Dashboard.
+
+2. Maintain your WODs separately from your other posts, pages, and media.
+
+3. Edit WODs with the built-in WordPress editor.
+
+4. Add videos or other media to your WOD posts. 
+
+5. Works with any WordPress theme.
 
 == Changelog ==
 
