@@ -18,17 +18,16 @@ Adds a custom WOD post type to the native WordPress dashboard. This will allow y
 
 The WOD post type uses the native WordPress interface for editing WODs, so you can include links, pictures, videos or short-codes with your WODs just as you can in a blog post or page.
 
-Check out the plugin’s Screenshots (http://wordpress.org/plugins/cf-wod-posts/screenshots/) for an easy visual guide to the plugin’s features.
+Check out the plugin’s Screenshots [screenshots page](http://wordpress.org/plugins/cf-wod-posts/screenshots/) for an easy visual guide to the plugin’s features.
 
 
 == Installation ==
 
 This section describes how to install the plugin and activate it.
 
-1. Use the dashboard:
-[youtube http://youtu.be/Rld9jWgsH-A]
-1. Upload `cf-wod.php` to the `/wp-content/plugins/` directory
-2. Activate the plugin through the 'Plugins' menu in WordPress
+1. Use the dashboard: [YouTube video here](youtube http://youtu.be/Rld9jWgsH-A)
+2. Or, upload `cf-wod.php` to the `/wp-content/plugins/` directory
+3. In either case, remember to “Activate” the plugin through the 'Plugins' menu in the WordPress Dashboard
 
 == Frequently Asked Questions ==
 
