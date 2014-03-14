@@ -1,4 +1,4 @@
-=== Plugin Name ===
+=== CF WOD Posts ===
 Contributors: mattmcgiv
 Tags: WOD, CrossFit
 Donate link: http://boxhacks.com/wod-plugin
@@ -24,9 +24,9 @@ View [Installation instructions](http://wordpress.org/plugins/cf-wod-posts/insta
 
 This section describes how to install the plugin and activate it.
 
-1. Use the dashboard: [YouTube video here](http://youtu.be/Rld9jWgsH-A)
-2. Or, upload `cf-wod.php` to the `/wp-content/plugins/` directory
-3. In either case, remember to “Activate” the plugin through the 'Plugins' menu in the WordPress Dashboard
+* Use the dashboard: [Video instructions](http://youtu.be/Rld9jWgsH-A)
+* Or, upload `cf-wod.php` to the `/wp-content/plugins/` directory
+* In either case, remember to “Activate” the plugin through the 'Plugins' menu in the WordPress Dashboard
 
 == Frequently Asked Questions ==
 
