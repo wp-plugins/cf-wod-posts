@@ -23,8 +23,10 @@ Check out the plugin’s Screenshots (http://wordpress.org/plugins/cf-wod-posts/
 
 == Installation ==
 
-This section describes how to install the plugin and get it working.
+This section describes how to install the plugin and activate it.
 
+1. Use the dashboard:
+[youtube http://youtu.be/Rld9jWgsH-A]
 1. Upload `cf-wod.php` to the `/wp-content/plugins/` directory
 2. Activate the plugin through the 'Plugins' menu in WordPress
 
