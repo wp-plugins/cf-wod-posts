@@ -18,6 +18,8 @@ Adds a custom WOD post type to the native WordPress dashboard. This will allow y
 
 The WOD post type uses the native WordPress interface for editing WODs, so you can include links, pictures, videos or short-codes with your WODs just as you can in a blog post or page.
 
+The WODs automatically post to whatever page you have set to list your recent posts.
+
 View [Installation instructions](http://wordpress.org/plugins/cf-wod-posts/installation/) or check out the plugin’s [Screenshots page](http://wordpress.org/plugins/cf-wod-posts/screenshots).
 
 == Installation ==
