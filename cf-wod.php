@@ -3,7 +3,7 @@
 /**
  * Plugin Name: CF Wod Posts
  * Description: Provides the ability to create a WOD post in WordPress.
- * Version: 1.0
+ * Version: 1.1
  * Author: Matt McGivney
  * Author URI: http://antym.com
  * Stable tag: 1.1
