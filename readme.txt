@@ -2,9 +2,10 @@
 Contributors: mattmcgiv
 Tags: WOD, CrossFit
 Donate link: http://boxhacks.com/wod-plugin
+GitHub Plugin URI: https://github.com/mattmcgiv/cf-wod-posts
 Requires at least: 3.0.1
 Tested up to: 3.8
-Stable tag: 1.0
+Stable tag: 1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -18,7 +19,9 @@ Adds a custom WOD post type to the native WordPress dashboard. This will allow y
 
 The WOD post type uses the native WordPress interface for editing WODs, so you can include links, pictures, videos or short-codes with your WODs just as you can in a blog post or page.
 
-The WODs automatically post to whatever page you have set to list your recent posts.
+By default, WODs display to whatever page you have set to list your recent posts.
+
+However, since Version 1.1 of the plugin, there is also a WOD widget included so you can display your recent WODs in a sidebar, footer, or any other location your theme allows placement of a widget.
 
 View [Installation instructions](http://wordpress.org/plugins/cf-wod-posts/installation/) or check out the plugin’s [Screenshots page](http://wordpress.org/plugins/cf-wod-posts/screenshots).
 
@@ -49,13 +52,21 @@ This section describes how to install the plugin and activate it.
 = 1.0 =
 *Initial plugin version.
 
+= 1.1 =
+*Added Widget feature; display a customizable list of WODs any where you can display a widget.
+*Added a Settings section for the plugin; allows for toggling whether or not WODs display within your main query. Note:  This setting is located under the Dashboard->Settings->Reading->WOD Settings
+
 == Upgrade Notice ==
+
+= 1.1 =
+*Added Widget feature (go to Dashboard->Appearance->Widgets to activate).
+*Added options under Dashboard->Settings->Reading->WOD Settings
 
 = 1.0 =
 *Initial plugin version.
 
-== A note from the lead programmer ==
+== A note from the lead developer ==
 
 I would love to hear any feedback you have regarding this WOD plugin.  *Help me make it even better* for the CrossFit community; please use the WordPress.org support forums to submit bug reports, feature requests, etc.
 
-Also, I blog about Crossfit and software and http://boxhacks.com.  If you like the plug-in, please consider signing up for my email newsletter.
+Also, I blog about CrossFit and software and http://boxhacks.com.  If you like the plug-in, please consider signing up for my email newsletter.
