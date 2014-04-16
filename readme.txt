@@ -50,20 +50,21 @@ This section describes how to install the plugin and activate it.
 == Changelog ==
 
 = 1.0 =
-*Initial plugin version.
+* Initial plugin version.
 
 = 1.1 =
-*Added Widget feature; display a customizable list of WODs any where you can display a widget.
-*Added a Settings section for the plugin; allows for toggling whether or not WODs display within your main query. Note:  This setting is located under the Dashboard->Settings->Reading->WOD Settings
+* Added Widget feature; display a customizable list of WODs any where you can display a widget.
+
+* Added a Settings section for the plugin; allows for toggling whether or not WODs display within your main query. Note:  This setting is located under the Dashboard->Settings->Reading->WOD Settings
 
 == Upgrade Notice ==
 
 = 1.1 =
-*Added Widget feature (go to Dashboard->Appearance->Widgets to activate).
-*Added options under Dashboard->Settings->Reading->WOD Settings
+* Added Widget feature (go to Dashboard->Appearance->Widgets to activate).
+* Added options under Dashboard->Settings->Reading->WOD Settings
 
 = 1.0 =
-*Initial plugin version.
+* Initial plugin version.
 
 == A note from the lead developer ==
 

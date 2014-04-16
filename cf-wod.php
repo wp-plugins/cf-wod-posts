@@ -7,6 +7,7 @@
  * Author: Matt McGivney
  * Author URI: http://antym.com
  * Stable tag: 1.1
+ * Tested up to: 3.9
  * License: GPL2
  */
  
