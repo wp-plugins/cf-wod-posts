@@ -1,19 +1,17 @@
 === CF WOD Posts ===
 Contributors: mattmcgiv
 Tags: WOD, CrossFit
-Donate link: http://boxhacks.com/wod-plugin
-GitHub Plugin URI: https://github.com/mattmcgiv/cf-wod-posts
 Requires at least: 3.0.1
-Tested up to: 3.9
-Stable tag: 1.1
+Tested up to: 4.1
+Stable tag: 1.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Add the ability to post CrossFit WODs to your WordPress site.
+Post CrossFit WODs to your WordPress site.
 
 == Description ==
 
-Add the ability to post CrossFit WODs to your WordPress site.
+Post CrossFit WODs to your WordPress site.
 
 Adds a custom WOD post type to the native WordPress dashboard. This will allow you to have an area of your dashboard dedicated to creating, editing, and publishing WODs while keeping your other content such as blog posts, pages, and media separate.
 
@@ -57,7 +55,13 @@ This section describes how to install the plugin and activate it.
 
 * Added a Settings section for the plugin; allows for toggling whether or not WODs display within your main query. Note:  This setting is located under the Dashboard->Settings->Reading->WOD Settings
 
+= 1.2 =
+* Fixes conflict with Genesis framework themes
+
 == Upgrade Notice ==
+
+= 1.2 =
+* Fixes conflict with Genesis framework themes
 
 = 1.1 =
 * Added Widget feature (go to Dashboard->Appearance->Widgets to activate).
@@ -70,4 +74,4 @@ This section describes how to install the plugin and activate it.
 
 I would love to hear any feedback you have regarding this WOD plugin.  *Help me make it even better* for the CrossFit community; please use the WordPress.org support forums to submit bug reports, feature requests, etc.
 
-Also, I blog about CrossFit and software and http://boxhacks.com.  If you like the plug-in, please consider signing up for my email newsletter.
+Also, run a WordPress development business.  If you like the plug-in, please consider signing up for my email newsletter or referring new clients my way! [Antym.com](http://antym.com)
