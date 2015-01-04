@@ -2,12 +2,12 @@
 
 /**
  * Plugin Name: CF Wod Posts
- * Description: Provides the ability to create a WOD post in WordPress.
- * Version: 1.1
+ * Description: Post WODs with WordPress
+ * Version: 1.2
  * Author: Matt McGivney
  * Author URI: http://antym.com
- * Stable tag: 1.1
- * Tested up to: 3.9
+ * Stable tag: 1.2
+ * Tested up to: 4.1
  * License: GPL2
  */
  
@@ -27,9 +27,9 @@
     Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
-	add_action( 'init', 'create_post_type' );
+	add_action( 'init', 'cf_wod_create_post_type' );
 	
-	function create_post_type() {
+	function cf_wod_create_post_type() {
 		register_post_type( 'cf_wod',
 			array(
 				'labels' => array(
@@ -53,6 +53,7 @@
 			'supports' => array('title', 'editor', 'author', 'comments')
 			)
 		);
+		flush_rewrite_rules();
 	} 
 
 	/*
@@ -60,15 +61,11 @@
 	* posts (like blog posts).
 	*/
 	
-	add_action( 'pre_get_posts', 'add_my_post_types_to_query' );
+	add_action( 'pre_get_posts', 'cf_wod_add_my_post_types_to_query' );
 	
-	function add_my_post_types_to_query( $query ) {
-		
-			echo("<script>console.log('Reading wod_display setting.');</script>");
+	function cf_wod_add_my_post_types_to_query( $query ) {
 		
 		if (get_option('wods_in_main')) {
-			
-			echo("<script>console.log('wod_display... returned true,inside if statement');</script>");
 			
 			if ( is_home() && $query->is_main_query() ) {
 					$query->set( 'post_type', array( 'post', 'cf_wod' ) );
@@ -82,11 +79,11 @@
 	*
 	*/
 
-	add_action('admin_init', 'initialize_wod_options');		
-	function initialize_wod_options() {
+	add_action('admin_init', 'cf_wod_initialize_wod_options');		
+	function cf_wod_initialize_wod_options() {
 		
 		//Add the setting section to the reading page
-		add_settings_section( 'wod_settings_id', 'WOD Settings', 'wod_settings_callback', 'reading' );
+		add_settings_section( 'wod_settings_id', 'WOD Settings', 'cf_wod_settings_callback', 'reading' );
 		
 		// Add the field for toggling whether or not WODs show up in the main query.
 		add_settings_field( 
@@ -106,7 +103,7 @@
 	}
 	
 	//implementing the callback identified in the add_settings_setion(...) call above
-	function wod_settings_callback() {
+	function cf_wod_settings_callback() {
 		echo '<p>Select how you would like to display WODs.</p>';
 	}
 	
@@ -122,7 +119,7 @@
     echo $html;	}
     
     //Word Trimmer
-	function custom_posts_word_trimmer($string, $count, $ellipsis = FALSE){
+	function cf_wod_custom_posts_word_trimmer($string, $count, $ellipsis = FALSE){
 	  $words = explode(' ', $string);
 	  if (count($words) > $count){
 	    array_splice($words, $count);
@@ -165,7 +162,7 @@
 				$loop->the_post(); 
 							$cont = get_the_content();
 							$cont = str_replace( array("\n", "\r"), ' ', esc_attr( strip_tags( @html_entity_decode( $cont, ENT_QUOTES, get_option('blog_charset') ) ) ) );
-							$cont = custom_posts_word_trimmer ($cont, $postlength, false);
+							$cont = cf_wod_custom_posts_word_trimmer ($cont, $postlength, false);
 							$cont = esc_html($cont);
 						
 						
@@ -195,24 +192,23 @@
 	
 	
 	    function update($new_instance, $old_instance) {				
-		$instance = $old_instance;
-		$instance['title'] = strip_tags($new_instance['title']);
-		$instance['customtext'] = $new_instance['customtext'];
-		$instance['show_image'] = $new_instance['show_image'];
-		$instance['posttype'] = $new_instance['posttype'];
-		$instance['moretext'] = strip_tags($new_instance['moretext']);
-		$instance['postlength'] = strip_tags($new_instance['postlength']);
-		$instance['postnum'] = strip_tags($new_instance['postnum']);
-		$instance['byorder'] = $new_instance['byorder'];
-		$instance['sorter'] = $new_instance['sorter'];
-	        return $instance;
+			$instance = $old_instance;
+			$instance['title'] = strip_tags($new_instance['title']);
+			$instance['customtext'] = $new_instance['customtext'];
+			$instance['show_image'] = $new_instance['show_image'];
+			$instance['posttype'] = $new_instance['posttype'];
+			$instance['moretext'] = strip_tags($new_instance['moretext']);
+			$instance['postlength'] = strip_tags($new_instance['postlength']);
+			$instance['postnum'] = strip_tags($new_instance['postnum']);
+			$instance['byorder'] = $new_instance['byorder'];
+			$instance['sorter'] = $new_instance['sorter'];
+		    return $instance;
 	    }
 	
 		//This function defines the options shown for the plugin once it is added to the sidebar area of the widgets screen.
 		
 	    function form($instance) {	
-	    	//Sets DEFAULTS for the type of Custom Content [todo: "WODs"]	
-	    	//todo:  This area of the code has crappy formatting.		
+	    	//Sets DEFAULTS for WODS			
 			$defaults = array( 'title' => 'WODs', 'moretext' => 'more', 'postnum'=> 3, 'postlength'=>15);
 			$instance = wp_parse_args( (array) $instance, $defaults ); ?>
 	        
@@ -266,4 +262,32 @@
 
 	// register WODPostsContent widget
 	add_action('widgets_init', create_function('', 'return register_widget("WODPostsContent");'));
+
+	/*
+	* Adds shortcode to allow inclusion of WODs in content areas
+	*/
+	
+	function cf_wods_custom_shortcode( $atts ) {
+
+		// Attributes
+		extract( shortcode_atts(
+			array(
+				'id' => '',
+			), $atts )
+		);
+	
+		if ( FALSE === get_post_status( $id ) ) {
+  			return "Error: The WOD referenced in your shortcode doesn't exist.";
+		} else {
+  			$cf_wod_post=get_post($id);
+		return $cf_wod_post->post_title . "<br>" 
+			. $cf_wod_post->post_content;
+		}		
+	}
+
+	add_action( 'init', 'cf_wod_add_shortcode');
+	function cf_wod_add_shortcode () {
+		add_shortcode( 'cf_wods', 'cf_wods_custom_shortcode' );	
+	}
+	
 ?>
